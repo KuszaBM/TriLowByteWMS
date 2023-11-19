@@ -1,0 +1,33 @@
+<div class="itemsBox">
+  <button class = "basicButton" (click)="toggleItems()">{{listButtonText}}</button>
+
+  <div *ngIf="!hideItems" class="itemList">
+    <div [innerText]="itemList.length">
+    </div>
+    <div *ngIf="!hideItems">items</div>
+    <table class="itemTable">
+<!--      <tr>-->
+<!--        <th>PRODUCT NAME: </th>-->
+<!--        <th>COST: </th>-->
+<!--        <th>WEIGHT: </th>-->
+<!--      </tr>-->
+      <tr *ngFor="let Product of itemList">
+        <div>
+          <button class="basicButton" (click)="showEditToolsForItem(Product)"><td> PRODUCT NAME: {{Product.name}}</td>
+            <div>
+              <td> | COST: {{Product.cost}}</td>
+              <td> | WEIGHT: {{Product.weightInGrams}}</td>
+              <td> | Id: {{Product.productId}}</td>
+            </div>
+          </button>
+          <div class="itemTools" [hidden]="!Product.showEditTools">
+            <button class="editToolButton" (click)="removeItem(Product)">Delete</button>
+            <button class="editToolButton" (click)="hideEditToolsForItem(Product)">Edit</button>
+            <button class="editToolButton" (click)="hideEditToolsForItem(Product)">X</button>
+          </div>
+        </div>
+      </tr>
+    </table>
+  </div>
+</div>
+

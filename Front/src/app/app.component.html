@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+  <body>
+  <div class="main">
+    <div class="left">
+      <label><button class="interfaceButton" (click)="changeLogo()">12</button></label>
+      <label><button class="interfaceButton" (click)="changeLogo()">12</button></label>
+      <label><button class="interfaceButton" (click)="changeLogo()">12</button></label>
+      <label><button class="interfaceButton" (click)="changeLogo()">12</button></label>
+<!--      <app-rooms></app-rooms>-->
+    </div>
+    <div class='center' id="bannerCenter">
+      <div class="accordion">
+        <input type="radio" name="select" class="accordion-select" checked />
+        <div class="accordion-title"><span>Title</span></div>
+        <div class="accordion-content">Content</div>
+        <input type="radio" name="select" class="accordion-select" />
+        <div class="accordion-title"><span>Title</span></div>
+        <div class="accordion-content"><app-info></app-info></div>
+        <input type="radio" name="select" class="accordion-select" />
+        <div class="accordion-title"><span>Title</span></div>
+        <div class="accordion-content"><app-wms></app-wms></div>
+      </div>
+      <div class="logo"><img class="logo" id="mainLogo" src="/assets/images/TLB.png" alt='image'></div>
+        <button (click)="changeLogo()">
+          AddProduct
+        </button>
+      </div>
+    <div class="right">
+      <app-rooms></app-rooms>
+    </div>
+  </div>
+  </body>
+</html>

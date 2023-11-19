@@ -1,0 +1,41 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="inputBox">
+  <label class="inputL">
+    <div class="jak">
+      <div class="form__group field">
+        <input type="input" class="form__field" placeholder="Name" name="name" id='name' required #name/>
+        <label for="name" class="form__label">Name</label>
+      </div>
+    </div>
+    <div class="jak">
+      <div class="form__group field">
+        <input type="input" class="form__field" placeholder="cost" name="cost" id='cost' required #cost/>
+        <label for="name" class="form__label">cost</label>
+      </div>
+    </div>
+    <div class="jak">
+      <div class="form__group field">
+        <input type="input" class="form__field" placeholder="weight" name="weight" id='weight' required #weight/>
+        <label for="name" class="form__label">weight</label>
+      </div>
+    </div>
+<!--    <p>Podaj nazwe</p>-->
+<!--    <input class='dateInputProduct' type="text" #name>-->
+<!--    <p>Podaj wage w [g]</p>-->
+<!--    <input class='dateInputProduct' type="number" #weight>-->
+<!--    <p>Podaj koszt prdukcji 1szt</p>-->
+<!--    <input class='dateInputProduct' type="number" #cost>-->
+<!--    <div class="centered">-->
+<!--      <div class="group"><input type="text" id="name" required="required" /><label class="labelA" for="name">Name</label>-->
+<!--        <div class="bar"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+  </label>
+  <button (click)="postProduct(name.value, weight.value, cost.value)" class="basicButton">Add new Product</button>
+</div>
+</body>
+</html>

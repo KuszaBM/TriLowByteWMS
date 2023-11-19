@@ -1,0 +1,50 @@
+<div class = "info">
+  <div>
+    <div class="jak">
+      <div class="form__group field">
+        <input type="input" class="form__field" placeholder="fieldName" name="fieldName" id='fieldName' required #fieldName/>
+       <label for="fieldName" class="form__label">fieldName</label>
+      </div>
+    </div>
+  </div>
+  <div class="checkboxesBox">
+    <div class = "infoCheckbox">
+      <label>String</label>
+      <input type="checkbox" id="strCheckbox"  [(ngModel)]="k" (change)="strChecked()">
+    </div>
+    <div class = "infoCheckbox" >
+      <label>Number</label>
+      <input type="checkbox" id="numCheckbox"  (change)="numChecked()">
+    </div>
+    <div class = "infoCheckbox">
+      <label>Date</label>
+      <input type="checkbox"  id="dateCheckbox"   (change)="dateChecked()">
+    </div>
+  </div>
+  <button class="basicButton" (click)="addInfo(fieldName.value, addedInfo.length)">Add</button>
+</div>  <table class="itemTable">
+  <!--      <tr>-->
+  <!--        <th>PRODUCT NAME: </th>-->
+  <!--        <th>COST: </th>-->
+  <!--        <th>WEIGHT: </th>-->
+  <!--      </tr>-->
+  <tr *ngFor="let Info of addedInfo">
+    <div class = "newInfoInputField">
+      <td> FIELD NAME: {{Info.fieldName}}</td>
+        <div>
+          <div class="jak">
+            <div class="form__group field">
+              <input type="input" class="form__field" placeholder="{{Info.fieldName}}" name="{{Info.fieldName}}" id='{{Info.fieldName}}' [(ngModel)]="addedInfo[Info.id].value"/>
+              <label for="{{Info.fieldName}}" class="form__label">{{Info.fieldName}}</label>
+            </div>
+          </div>
+        </div>
+      <div class="itemTools" [hidden]="!Info.showTools">
+        <button class="editToolButton">Delete</button>
+        <button class="editToolButton">Edit</button>
+        <button class="editToolButton">X</button>
+      </div>
+    </div>
+  </tr>
+</table>
+

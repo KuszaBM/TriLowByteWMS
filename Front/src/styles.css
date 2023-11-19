@@ -1,0 +1,332 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+}
+h1 {
+  color: navy;
+  margin-left: 20px;
+  font-size: 50px;
+}
+div.main {
+  display: flex;
+  justify-content: center;
+  background-color: rosybrown;
+  width: 100%;
+  height: 30%;
+
+}
+.itemTable {
+}
+.itemsBox {
+  margin-left: 20px;
+  justify-content: center;
+}
+div.itemList {
+  /*background-color: #d83526;*/
+  box-sizing: border-box;
+  color: white;
+
+}
+div.left {
+  width: 15%;
+}
+div.right {
+  width: 15%;
+}
+div.logo {
+  margin-top: 20px;
+}
+button.interfaceButton {
+  margin-left: 10%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  width: 80%;
+  padding: 2px;
+  font-size: 80%;
+}
+div.center {
+  border: 5px solid white;
+  border-radius: 10px;
+  background-color: navajowhite;
+  width: 50%;
+  height: 100%;
+  /*margin: 5%;*/
+  padding: 10px;
+  text-align: center;
+}
+img.logo {
+  border-radius: 10%;
+  width: 50%;
+  height:50%;
+}
+body {
+  /*display: flex;*/
+  /*justify-content: center;*/
+}
+.basicButton {
+  box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+  background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color:#fc8d83;
+  border-radius:6px;
+  width: 10 0%;
+  border:1px solid #d83526;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #de4b40;
+}
+.basicButton:hover {
+  background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color:#e4685d;
+}
+.basicButton:active {
+  position:relative;
+  top:1px;
+}
+.interfaceButton {
+  box-shadow:inset 0px 1px 0px 0px #f7c5c0;
+  background:linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color:#fc8d83;
+  border-radius:6px;
+  border:1px solid #d83526;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:24px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #de4b40;
+}
+.interfaceButton:hover {
+  background:linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color:#e4685d;
+}
+.interfaceButton:active {
+  position:relative;
+  top:1px;
+}
+.editToolButton {
+  box-shadow:inset 0px 1px 0px 0px #fce2c1;
+  background:linear-gradient(to bottom, #ffc477 5%, #fb9e25 100%);
+  background-color:#ffc477;
+  border-radius:6px;
+  border:1px solid #eeb44f;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #cc9f52;
+}
+.editToolButton:hover {
+  background:linear-gradient(to bottom, #fb9e25 5%, #ffc477 100%);
+  background-color:#fb9e25;
+}
+.editToolButton:active {
+  position:relative;
+  top:1px;
+}
+.itemTools {
+  display: inline-flex;
+  align-items: center;
+  align-content: center;
+}
+.inputBox {
+  box-sizing: border-box;
+}
+.inputBox:hover {
+
+}
+inputL {
+  margin-bottom: 15px;
+  padding-bottom: 40px;
+}
+inputL:hover {
+  background-color: #de4b40;
+}
+
+.jak {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: normal;
+  min-height: 10vh;
+  font-size: 1.5rem;
+}
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+.form__field {
+  font-family: inherit;
+  margin-left: 20px;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: black;
+  padding: 5px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.form__label {
+  margin-left: 20px;
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+/* reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+.accordion {
+  box-sizing: border-box;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  width: 100%;
+}
+
+.accordion-select {
+  cursor: pointer;
+  margin: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.accordion-title {
+  position: relative;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+  border: 1px solid transparent;
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.accordion-title span {
+  bottom: 0px;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.accordion-content {
+  box-sizing: border-box;
+  overflow: auto;
+  position: relative;
+  transition: margin 0.3s ease 0.1s;
+}
+
+.accordion-select:checked + .accordion-title + .accordion-content {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+/* Generated styles starts here */
+
+.accordion {
+  border-color: #dedede;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  flex-direction: row;
+  height: 382px;
+}
+
+.accordion-title,
+.accordion-select  {
+  background-color: #ffffff;
+  color: #7f8787;
+  width: 65px;
+  height: 100%;
+  font-size: 15px;
+}
+
+.accordion-select {
+  margin-bottom: -65px;
+  margin-right: -65px;
+}
+
+.accordion-title:not(:nth-last-child(2))::after {
+  border-bottom-color: transparent;
+  border-right-color: rgb(234, 234, 234);
+}
+
+.accordion-select:hover + .accordion-title,
+.accordion-select:checked + .accordion-title {
+  background-color: #ffffff;
+}
+
+.accordion-title span  {
+  transform: rotate(-90deg);
+  -ms-writing-mode: lr-bt;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  padding-bottom: 33px;
+  padding-top: 33px;
+  line-height: 65px;
+}
+
+.accordion-content {
+  background-color: #f7f7f7;
+  color: #7f8787;
+  height: 100%;
+  margin-bottom: 0;
+  margin-right: calc(-1 * calc(100% - 195px));
+  padding: 30px;
+  width: calc(100% - 195px);
+}
+
+
+
+
+
